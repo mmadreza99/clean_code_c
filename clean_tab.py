@@ -1,7 +1,7 @@
 import re
+from file import out_file
 
-
-def clean_tab(text):
+def clean_tab(file_name, text):
     tabs = 0
     result=''
 
@@ -20,5 +20,5 @@ def clean_tab(text):
             tabs += 1 
         
         result += line + '\n'
-    return result
+    return out_file(file_name, result)
 

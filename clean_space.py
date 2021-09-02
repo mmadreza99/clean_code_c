@@ -2,7 +2,7 @@ import re
 from clean_tab import clean_tab
 
 
-def clean_space(text):
+def clean_space(file_name, text):
 
     text = re.sub(r',([a-z,&,0-9])',r', \1',text)                   #Add spaces after commas
     text = re.sub(r' ,',r',',text)                                  #remove space before commas
@@ -27,4 +27,4 @@ def clean_space(text):
     text = re.sub(r'(\(.*?\){)',r'\1\n',text)                       #clean () as in { 
     text = re.sub(r'(;)(})',r'\1\n\2',text)                         #clean () as in { 
     
-    return clean_tab(text)
+    return clean_tab(file_name, text)

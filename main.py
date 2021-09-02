@@ -1,17 +1,12 @@
 from clean_space import clean_space
-
-
-def open_file(name):
-    with open(name, 'r') as file:
-        text = file.read()
-        return text    
-    
+from file import open_file
+from static import SPACE, STAR
 
 if __name__ == "__main__":
-    star = '*' * 50
-    space = ' ' * 15
-    text = open_file("code_c.txt")
-    print(f'\n{star}\n{space}:before clean code : \n{star}\n\n{text}')
-    
-    clean_text = clean_space(text)
-    print(f'\n{star}\n {space}:after clean code : \n{star}\n\n{clean_text}')
+    file_name = input(">>> Enter your file name : ")
+
+    text = open_file(file_name)
+    clean_text = clean_space(file_name, text)
+
+    #print(f'\n{star}\n{space}:before clean code : \n{star}\n\n{text}')
+    print(f'\n{STAR}\n {SPACE}:after clean code: \n{STAR}\n\n{clean_text}')
