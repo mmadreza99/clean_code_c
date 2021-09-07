@@ -25,6 +25,6 @@ for run script pleas to follow :
 
 And **Enter** the name of your file:
 
-    >>> Enter your file name :
+    >>> Enter your file name :c_code.txt
 
 ### successful to create the file your_file_done.*
