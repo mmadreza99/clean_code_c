@@ -1,8 +1,8 @@
-def readline_cammnd():
+def readline_commnd():
     text = ''
     get_text = True
     while get_text:
-        input_text =  input('->')
+        input_text = input('->')
         if len(input_text) > 0 and input_text[0] == '}':
             get_text = False
         text += input_text + '\n'
